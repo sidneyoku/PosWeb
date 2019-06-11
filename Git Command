@@ -1,0 +1,4 @@
+git add *
+git config user.email ""
+git commit -am "Mensagem."
+git push origin master
