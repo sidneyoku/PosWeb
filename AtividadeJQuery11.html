@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade JQuery 11</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto p-4">
+                <form action="">
+                    Nome:<input type="text" class="control form-control" id="nome">
+                    <br>
+                    E-mail:<input type="email" class="control form-control" id="email">
+                    <br>
+                    Profissão:
+                    <select id="profissao" class="controle form-control">
+                        <option value="">Selecione...</option>
+                        <option value="1">Professor</option>
+                        <option value="2">Estudante</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="div_estudante" >
+            <div class="col-md-6 mx-auto p-2">
+                <h3>Estudante</h3>
+                <br>
+                <form action="">
+                    Registro Acadêmico (RA):<input type="text" class="control form-control" id="ra">
+                    Senha:<input type="password" class="controle form-control">
+                </form>
+            </div>
+        </div>
+        <div class="row" id="div_professor">
+            <div class="col-md-6 mx-auto p-2">
+                <h3>Professor</h3>
+                <br>
+                <form action="">
+                    SIAPE:<input type="text" class="controle form-control" id="siape">
+                    Data de ingresso:<input type="date" class="controle form-control">
+                    Senha:<input type="password" class="controle form-control">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto p-2">
+                <br><br>
+                <input type="submit" value="Salvar" class="btn btn-primary salvar">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto p-2">
+                <h2 class="border-bottom border-dark mb-3">Registros</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Profissão</th>
+                            <th>N</th>
+                        </tr>
+                    </thead>
+                    <tbody id="res-cad">
+                        <tr>
+                            <td colspan="100%" class="text-center">Nenhum registro.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(div_estudante).hide();
+            $(div_professor).hide();
+            var profissao;
+
+            $("option").click(function (e) { 
+                profissao = $(this).text();
+                
+                if(profissao == "Estudante") {
+                    $(div_estudante).show();
+                    $(div_professor).hide();
+                } else if(profissao == "Professor") {
+                    $(div_estudante).hide();
+                    $(div_professor).show();
+                } else {
+                    $(div_estudante).hide();
+                    $(div_professor).hide();
+                }
+                
+                e.preventDefault();
+            });
+
+            $(".salvar").click(function (e) {
+                $("#res-cad").each(function() {
+                    if($(this).text() == "Nenhum registro.") {
+                        $(this).remove();
+                    }
+                });
+
+                if(profissao == "Estudante")
+                    $("#res-cad").append("<tr><td>" + $("#nome").val() + "</td><td>" + profissao + "</td><td>" + $("#ra").val() + "</td></tr>");
+                else
+                    $("#res-cad").append("<tr><td>" + $("#nome").val() + "</td><td>" + profissao + "</td><td>" + $("#siape").val() + "</td></tr>");
+                                
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
