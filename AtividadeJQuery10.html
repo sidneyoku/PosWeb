@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade JQuery 10</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto p-4">
+                <h2 class="text-center">Atividade JQuery 10</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <input type="text" id="entrada">
+                <button type="button" class="btn btn-primary" id="btn_filtrar">Filtrar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto p-4">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>E-mail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sidney</td>
+                            <td>132456</td>
+                            <td>sidney@sidney.com.br</td>
+                        </tr>
+                        <tr>
+                            <td>Fulano</td>
+                            <td>22</td>
+                            <td>funlano@fulano.com.br</td>
+                        </tr>
+                        <tr>
+                            <td>Ciclano</td>
+                            <td>33</td>
+                            <td>ciclano@ciclano.com.br</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            $("#btn_filtrar").click(function (e) {
+                var entrada = $("#entrada").val();
+                //var lista = $("tbody tr td").text();
+
+                $("tbody tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(entrada) > -1)
+                });
+
+                /**
+                $("tbody tr").each(function() {
+                    var elemento = $(this).children("td:first").text();
+ 
+                    if(elemento.includes(resp)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });*/
+
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
