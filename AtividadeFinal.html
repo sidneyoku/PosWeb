@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade Avaliativa Final - Sidney Toshidi Oku</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto p-4">
+                <h3 class="border-bottom border-dark text-center">
+                    Atividade Avaliativa Final - Sidney Toshidi Oku 
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mx-auto px-4">
+                <br>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#abaDadosPessoais">Dados Pessoais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#abaDadosFormacaoAcademica">Dados de Formação Acadêmica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#abaDadosProfissionais">Dados Profissionais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#abaEmailSenha">Finalização</a>
+                    </li>
+                </ul>
+
+                <div class="obrigatorio mt-2">
+                    <ul id="msg-obrigatorio" class="border border-danger"></ul>
+                </div>
+
+                <div class="tab-content">
+                    <div id="abaDadosPessoais" class="container tab-pane active shadow-none p-4 mb-4 bg-light">
+                        <br>
+                        <h3>Dados Pessoais</h3>
+                        <form action="">
+                            <div>
+                                <label for="">Nome:</label>
+                                <input type="text" id="nome" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                                <br>
+                                <label for="">Documento:</label>
+                                <input type="text" id="documento" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                                <br>
+                                <label for="">CEP:</label>
+                                <input type="text" id="cep" class="form-control">
+                                <label for="">Rua:</label>
+                                <input type="text" id="rua" class="form-control">
+                                <label for="">Bairro:</label>
+                                <input type="text" id="bairro" class="form-control">
+                                <label for="">Cidade:</label>
+                                <input type="text" id="cidade" class="form-control">
+                                <label for="">Estado:</label>
+                                <input type="text" id="estado" class="form-control">
+                            </div>
+                        </form>
+                        <br><br>
+                    </div>
+                    <div id="abaDadosFormacaoAcademica" class="container tab-pane fade shadow-none p-4 mb-4 bg-light">
+                        <br>
+                        <h3>Dados de Formação Acadêmica</h3>
+                        <form action="">
+                            <div>
+                                <label for="">Curso superior:</label>
+                                <input type="text" id="curso-superior" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                                <br>
+                                <label for="">Local:</label>
+                                <input type="text" id="curso-superior-local" class="form-control">
+                                <label for="">Data de conclusão:</label>
+                                <input type="text" id="curso-superior-data-conclusao" class="form-control">
+                                <label for="">Especialização:</label>
+                                <input type="text" id="especializacao" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                                <br>
+                                <label for="">Local:</label>
+                                <input type="text" id="especializacao-local" class="form-control">
+                                <label for="">Data de conclusão:</label>
+                                <input type="text" id="especializacao-data-conclusao" class="form-control">
+                            </div>
+                        </form>
+                        <br><br>
+                    </div>
+                    <div id="abaDadosProfissionais" class="container tab-pane fade shadow-none p-4 mb-4 bg-light">
+                        <br>
+                        <h3>Dados Profissionais</h3>
+                        <form action="">
+                            <div>
+                                <label for="">Data de entrada:</label>
+                                <input type="text" id="data-entrada" class="form-control">
+                                <label for="">Data de saída:</label>
+                                <input type="text" id="data-saida" class="form-control">
+                                <label for="">Função:</label>
+                                <input type="text" id="funcao" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                                <br>
+                                <label for="">Empresa:</label>
+                                <input type="text" id="empresa" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                            </div>
+                        </form>
+                        <br><br>
+                    </div>
+                    <div id="abaEmailSenha" class="container tab-pane fade shadow-none p-4 mb-4 bg-light">
+                        <br>
+                        <h3>Finalização</h3>
+                        <form action="">
+                            <div>
+                                <label for="">E-mail:</label>
+                                <input type="text" id="email" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                                <br>
+                                <label for="">Senha:</label>
+                                <input type="password" id="senha" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                                
+                                <button id="btn-mostrar" type="button" class="btn btn-sm">Mostrar</button>
+                                <br>
+
+                                <label for="">Repetir senha:</label>
+                                <input type="password" id="repetir-senha" class="form-control obrigatorio">
+                                <span class="text-danger"></span>
+                                <br>
+                                <br>
+                                <button type="submit" id="btn-salvar" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <i class="fa fa-save" aria-hidden="true"></i>
+                                    Salvar
+                                </button>
+                            </div>
+                        </form>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mx-auto p-3">
+                <h3 class="border-bottom border-dark mb-3" id="registros-cad">
+                    <i class="fa fa-folder" aria-hidden="true"></i>
+                    Cadastros
+                </h3>
+    
+                <table class="table table-striped shadow p-4 mb-4 bg-white">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cidade</th>
+                            <th>E-mail</th>
+                        </tr>
+                    </thead>
+                    <tbody id="res-cad">
+                        <tr>
+                            <td colspan="100%" class="text-center">Nenhum registro.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Senhas</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Senhas são diferentes!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".fa-folder").attr("style", "color:orange");
+
+            var folderFechado = true;
+            $("#msg-obrigatorio").hide();
+
+            $("table").hide();
+
+            $("#btn-mostrar").click(function (e) {
+                var texto = $(this).text();
+
+                if(texto == "Mostrar"){
+                    $("input[id=senha]").attr('type',"text");
+                    $(this).text("Esconder");
+                } else {
+                    $("input[id=senha]").attr('type',"password");
+                    $(this).text("Mostrar");
+                }
+
+                e.preventDefault();
+            });
+
+            $("#registros-cad").click(function () {
+                $("table").toggle();
+
+                if(folderFechado == true) {
+                    $("#registros-cad i").removeClass("fa fa-folder");
+                    $("#registros-cad i").addClass("fa fa-folder-open");
+                    $("#registros-cad i").attr("style", "color:purple");
+                    folderFechado = false;
+                } else {
+                    $("#registros-cad i").removeClass("fa fa-folder-open");
+                    $("#registros-cad i").addClass("fa fa-folder");
+                    $("#registros-cad i").attr("style", "color:orange");
+                    folderFechado = true;
+                }
+            });
+
+            $("#cep").blur(function() {
+                var cep = $("#cep").val();
+                // var url = "http://viacep.com.br/ws/87707080/json/?callback=?";
+                var url = "http://viacep.com.br/ws/" + cep + "/json/?callback=?";
+                var dados = "";
+                
+                $.getJSON(url, dados, function(resp, status) {
+                    if(status == "success") {
+                        $("#cep").val(resp.cep);
+                        $("#rua").val(resp.logradouro);
+                        $("#bairro").val(resp.bairro);
+                        $("#cidade").val(resp.localidade);
+                        $("#estado").val(resp.uf);
+                    } else {
+                        $("#cep").val("");
+                        $("#rua").val("");
+                        $("#bairro").val("");
+                        $("#cidade").val("");
+                        $("#estado").val("");
+                    }
+                });
+            });
+
+            $("form").submit(function(evento) {
+                var campo = false;
+                $("#msg-obrigatorio").empty(".elementoObrigatorio");
+
+                $(".obrigatorio").each(function() {
+                    if( $(this).val() == "" ) {
+                        $(this).next("span").text("Este campo é obrigatório.");
+                        $(this).addClass("border-danger");
+
+                        if($(this).attr("id") != null) {
+                            $("#msg-obrigatorio").css("color", "red");
+                            $("#msg-obrigatorio").append("<li class='elementoObrigatorio'>" + $(this).attr("id") + "</li>");
+                            campo = true;
+                        }
+                        
+                        evento.preventDefault();
+                    } else {
+                        $(this).next("span").text("");
+                        $(this).removeClass("border-danger");
+                    }
+                });
+
+                if($("#nome").val() != "" && $("#cidade").val() != "" && $("#email").val() != "" && campo == false) {
+                    var senha = $("input[id=senha]").val();
+                    var repetirSenha = $("input[id=repetir-senha]").val();
+
+                    if(senha != repetirSenha) {
+                        // alert("As senhas são diferentes!");
+                        $('#exampleModalCenter').modal('show');
+
+                        $("input[id=repetir-senha]").focus();
+                        $("input[id=repetir-senha]").addClass("border-danger");
+                        $("input[id=senha]").addClass("border-danger");
+                    } else {
+                        $("#res-cad td").each(function() {                            
+                            if($(this).text() == "Nenhum registro.") {
+                                $(this).remove();
+                            }
+                        });
+
+                        $("#msg-obrigatorio").removeClass("border-danger");
+
+                        $("#res-cad").append("<tr><td>" + $("#nome").val() + "</td><td>" + $("#cidade").val() + "</td><td>" + $("#email").val() + "</td></tr>");
+                        $("input[id=repetir-senha]").removeClass("border-danger");
+                        $("input[id=senha]").removeClass("border-danger");
+
+                        $("table").fadeIn();
+                        $("#registros-cad i").removeClass("fa fa-folder");
+                        $("#registros-cad i").addClass("fa fa-folder-open");
+                        folderFechado = false;
+
+                        //$("form input").val("");
+                        
+                        $("form").each(function() {
+                           this.reset();
+                        });
+                    }
+                }
+
+                if(campo == true) {
+                    $("#msg-obrigatorio").show();
+                    $("html, body").animate({scrollTop:$(".nav-item").offset().top}, "slow");
+                    //$("html, body").animate({scrollTop:$("#msg-obrigatorio").offset().top}, "slow");
+                    //$("html, body").animate({scrollTop:0}, "slow");
+                    //$('nav-item').scrollTop(0);
+                }
+
+                campo = false;
+            });
+        });
+    </script>
+</body>
+</html>
